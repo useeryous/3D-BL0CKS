@@ -7,4 +7,3 @@
         volumes:
           - .:/app
         command: npm run serve
-        
