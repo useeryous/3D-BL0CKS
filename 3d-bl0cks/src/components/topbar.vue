@@ -52,4 +52,9 @@
         --green14: #039C03;
     }
     /*use var() to assign a color to a element*/
+
+    p {
+        margin: 0px;
+        color: var(--green1);
+    }
 </style>
