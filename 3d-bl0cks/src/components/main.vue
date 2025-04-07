@@ -1,19 +1,17 @@
 <template>
     <div id="main">
         <img id="background" alt="matrix backgrounf" src="./assets/Matrix wallpaper gif.gif">
-        <topbar/>
+        <TopBar/>
     </div>
 </template>
 
 <script>
-    import topbar from './topbar.vue'; 
-
-    
+    import TopBar from './topbar.vue'; 
 
     export default {
-        name: main,
+        name: 'MainPage',
         components: {
-            topbar
+            TopBar
         }
     }
 </script>

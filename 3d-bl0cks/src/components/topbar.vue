@@ -32,7 +32,7 @@
 
 <script>
     export default {
-        name: topbar,
+        name: 'TopBar',
     }
 </script>
 
