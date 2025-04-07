@@ -35,20 +35,21 @@
 </script>
 
 <style>
-    /*
-    #039C03
-    #00AE00
-    #00B200
-    #00A804
-    #087700
-    #155D07
-    #154509
-    #0B380D
-    #003811
-    #003113
-    #002113
-    #003000
-    #005200
-    #04EC00
-    */
+    :root {
+        --green1: #04EC00;
+        --green2: #005200;
+        --green3: #003000;
+        --green4: #002113;
+        --green5: #003113;
+        --green6: #003811;
+        --green7: #0B380D;
+        --green8: #154509;
+        --green9: #155D07;
+        --green10: #087700;
+        --green11: #00A804;
+        --green12: #00B200;
+        --green13: #00AE00;
+        --green14: #039C03;
+    }
+    /*use var() to assign a color to a element*/
 </style>
