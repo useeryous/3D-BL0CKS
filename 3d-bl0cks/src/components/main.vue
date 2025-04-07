@@ -1,6 +1,7 @@
 <template>
     <div id="main">
         <img id="background" alt="matrix backgrounf" src="./assets/Matrix wallpaper gif.gif">
+        <topbar/>
     </div>
 </template>
 

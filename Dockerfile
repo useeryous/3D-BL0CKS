@@ -1,23 +1,36 @@
-    # Use the official Node.js image as the base image
-    FROM node:lts-alpine
-    
-    # Set the working directory
+    # Use the official Node.js image as base
+    FROM node:16
+
+    # Set working directory
+    WORKDIR /app
+
+    # Copy package.json and install dependencies
+    COPY package*.json ./
+    RUN npm install
+
+    # Copy the rest of the application files
+    COPY . .
+
+    # Expose port
+    EXPOSE 3000
+
+    # Command to run the application
+    CMD ["npm", "start"]
+
+    # Use a Node.js image to build the app
+    FROM node:16 as builder
+
     WORKDIR /app
     
-    # Copy package.json and package-lock.json
-    COPY package*.json ./
-    
-    # Install dependencies
+    COPY 3d-bl0cks/package*.json ./
     RUN npm install
     
-    # Copy the rest of the application code
-    COPY . .
-    
-    # Build the Vue application
+    COPY 3d-bl0cks .
     RUN npm run build
     
-    # Expose the port the app runs on
-    EXPOSE 8080
+    # Use a lightweight Nginx image to serve the app
+    FROM nginx:stable-alpine
     
-    # Command to run the app
-    CMD ["npm", "run", "serve"]
+    COPY --from=builder /app/dist /usr/share/nginx/html
+    EXPOSE 80
+    CMD ["nginx", "-g", "daemon off;"]
