@@ -31,10 +31,12 @@
 </template>
 
 <script>
-
+    export default {
+        name: topbar,
+    }
 </script>
 
-<style>
+<style scoped>
     :root {
         --green1: #04EC00;
         --green2: #005200;
