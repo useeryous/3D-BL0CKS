@@ -18,7 +18,7 @@
 
 <style>
     #background {
-        height: max-content;
-        width: max-content;
+        height: auto;
+        max-width: 100%;
     }
 </style>
