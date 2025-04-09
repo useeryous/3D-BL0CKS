@@ -7,11 +7,13 @@
 
 <script>
     import TopBar from './topbar.vue'; 
+    import MainPageOne from './mainpage.vue';
 
     export default {
         name: 'MainPage',
         components: {
-            TopBar
+            TopBar,
+            MainPageOne
         }
     }
 </script>
