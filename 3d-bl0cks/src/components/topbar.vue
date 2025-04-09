@@ -29,7 +29,7 @@
     }
 </script>
 
-<style scoped>
+<style>
 
     @font-face {
         font-family: glitch;

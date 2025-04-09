@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-  main {
+  body {
     padding: 0px;
   }
 </style>
