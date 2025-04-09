@@ -33,7 +33,7 @@
 
     @font-face {
         font-family: glitch;
-        src: url(./assets/fonts/sdglitchdemo.zip);
+        src: url(./assets/fonts/SDGlitch_Demo.ttf);
     }
 
     :root {
