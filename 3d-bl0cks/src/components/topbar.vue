@@ -55,10 +55,47 @@
     /*use var() to assign a color to a element*/
 
     #topbar {
+        display: flex;
         position: absolute;
         width: absolute 100%;
         background-color: var(--green4);
         opacity: 0.7;
+    }
+
+    .buttonTitle {
+        width: 230px;
+        height: 60px; 
+        border: 0;
+        outline: none;
+        background-color: var(--green1);
+        cursor: pointer;
+        position: relative;
+        font-family: Tomorrow, sans-serif;
+        font-size: .85rem;
+        text-transform: uppercase;
+        color: var(--green4);
+        opacity: 0.7;
+        clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0); 
+    }
+
+    .buttonTitle__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        background-color: var(--green4);
+        clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+    }
+
+    #buttonHolder {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
     }
 
     #titleText {
