@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap");
+
 :root {
     --green1: #42B124;
     --green2: #004800;
     --green3: #004100;
     --green4: #140710;
     --green5: #005E00;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -24,35 +30,90 @@ body {
 }
 
 #topbar {
-    width: 100%;
+    display: flex;
+    width: absolute max-content;
     top: 8px;
     left: 15px;
     padding: 15px;
-    background-color: #140710;
+    background-color: var(--green4);
+    padding-left: 100px;
+    border-radius: 100px;
+    position: absolute;
+    opacity: 0.7;
+    top: 15px;
+}
+
+#btnHolder {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 15px;
+}
+
+.TT {
+  text-align:left;
+  font-size: 12px;
+  color: var(--green1);
+  margin: 0px;
+}
+
+.btn {
+  width: 130px;
+  height: 40px; 
+  border: 0;
+  outline: none;
+  background-color: var(--green1);
+  cursor: pointer;
+  position: relative;
+  font-family: Tomorrow, sans-serif;
+  font-size: .85rem;
+  text-transform: uppercase;
+  color: var(--green1);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
+
+.btn__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: var(--green4);
+  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+}
+
+.btn__label {
+  height: 10px;
+  font-size: .40rem;
+  position: absolute;
+  bottom: -4px;
+  right: 8%;
+  padding: 0 5px;
+  background-color: var(--green4);
+  z-index: 3;
 }
 
 .btn__glitch {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--green3);
-    filter: drop-shadow(-2px 3px #67e3f3) drop-shadow(-1px -3px #02d8f3) drop-shadow(2px 1px #02d8f3);
-  }
-  
-  .btn--secondary .btn__glitch {
-    background-color: var(--green2);
-  }
-  
-  .btn:hover .btn__glitch,
-  .btn:hover .btn__content::after,
-  .btn:focus .btn__glitch,
-  .btn:focus .btn__content::after {
-    display: block;
-    animation: glitch-animation 2s linear 0s infinite;
-  }
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellow-color);
+  filter: drop-shadow(-2px 3px #67e3f3) drop-shadow(-1px -3px #02d8f3) drop-shadow(2px 1px #02d8f3);
+}
+
+.btn:hover .btn__glitch,
+.btn:hover .btn__content::after,
+.btn:focus .btn__glitch,
+.btn:focus .btn__content::after {
+  display: block;
+  animation: glitch-animation 2s linear 0s infinite;
+}
 
 /* secret trick */
 @keyframes glitch-animation {
