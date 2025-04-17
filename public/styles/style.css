@@ -56,6 +56,22 @@ body {
   opacity: 0.7;
 }
 
+#Holder {
+  position: absolute;
+  width: absolute max-content;
+  top: 160px;
+  left: 15px;
+  border-radius: 100px;
+  padding: 50px;
+  background-color: var(--green4);
+  opacity: 0.7;
+}
+
+#smallIcon {
+  width: 25px;
+  height: 25px;
+}
+
 #btnHolder {
   display: flex;
   align-items: center;
