@@ -1,14 +1,17 @@
 //hide holder and setup
-let holder = document.getElementById('holder');
-holder.hidden = true;
+let holder = document.getElementById('screenHolder');
+let settingHolder = document.getElementById('settingHolder');
+holder.style.display = 'none';
+settingHolder.style.display = 'none';
+holder.style.display = 'none';
 
 //gets all the buttons to be clicked and when clicked swicthes
 
-let allBtn = document.getElementById('allBtn').addEventListener('click', showAll());
-let gamesBtn = document.getElementById('gamesBtn').addEventListener('click', showGames());
-let appsBtn = document.getElementById('appsBtn').addEventListener('click', showApps());
-let NSFWBtn = document.getElementById('NSFWBtn').addEventListener('click', showNSFW());
-let otherBtn = document.getElementById('otherBtn').addEventListener('click', showOthers());
+let allBtn = document.getElementById('allBtn').addEventListener('click', showAll);
+let gamesBtn = document.getElementById('gamesBtn').addEventListener('click', showGames);
+let appsBtn = document.getElementById('appsBtn').addEventListener('click', showApps);
+let NSFWBtn = document.getElementById('NSFWBtn').addEventListener('click', showNSFW);
+let otherBtn = document.getElementById('otherBtn').addEventListener('click', showOthers);
 
 //all the apps ti be show or hiden
 const games = document.getElementsByClassName('game');
@@ -19,38 +22,47 @@ const others = document.getElementsByClassName('other');
 
 
 //all functions to hide the apps and the rest of other functions
-function showAll() {
-    games.hidden = false;
-    apps.hidden = false;
-    NSFW.hidden = false;
-    others.hidden = false;
+
+showAll = () => {
+    games.style.display = 'block';
+    apps.style.display = 'block';
+    NSFW.style.display = 'block';
+    others.style.display = 'block';
 }
 
-function showGames() {
-    games.hidden = false;
-    apps.hidden = true;
-    NSFW.hidden = true;
-    others.hidden = true;
+showGames = () => {
+    games.style.display = 'block';
+    apps.style.display = 'none';
+    NSFW.style.display = 'none';
+    others.style.display = 'none';
 }
 
-function showApps() {
-    games.hidden = true;
-    apps.hidden = false;
-    NSFW.hidden = true;
-    others.hidden = true;
+showApps = () => {
+    games.style.display = 'none';
+    apps.style.display = 'block';
+    NSFW.style.display = 'none';
+    others.style.display = 'none';
 }
 
-function showNSFW() {
-    ggames.hidden = true;
-    apps.hidden = true;
-    NSFW.hidden = false;
-    others.hidden = true;
+showNSFW = () => {
+    games.style.display = 'none';
+    apps.style.display = 'none';
+    NSFW.style.display = 'block';
+    others.style.display = 'none';
 }
 
-function showOthers() {
-    games.hidden = true;
-    apps.hidden = true;
-    NSFW.hidden = true;
-    others.hidden = false;
+showOthers = () => {
+    games.style.display = 'none';
+    apps.style.display = 'none';
+    NSFW.style.display = 'none';
+    others.style.display = 'block';
 }
+
+/*function showAll() {
+*    games.hidden = false;
+*    apps.hidden = false;
+*    NSFW.hidden = false;
+*    others.hidden = false;
+}*/
+
 

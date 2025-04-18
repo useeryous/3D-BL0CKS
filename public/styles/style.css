@@ -25,6 +25,11 @@ body {
     background-color: #000000;
 }
 
+#con {
+  display: flex;
+  justify-content: center;
+}
+
 #background {
     position: relative;
     display: flex;
@@ -46,10 +51,15 @@ body {
 }
 
 #main {
+  place-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-around;
   position: absolute;
   top: 160px;
   left: 15px;
-  width: absolute max-content;
+  width: absolute 100%;
   padding: 15px;
   background-color: var(--green4);
   border-radius: 100px;
@@ -77,6 +87,11 @@ body {
   align-items: center;
   gap: 15px;
   margin-left: 15px;
+}
+
+.tinyButton {
+  height: 35px;
+  width: 35px;
 }
 
 .TT {
@@ -142,6 +157,10 @@ body {
 .btn:focus .btn__content::after {
   display: block;
   animation: glitch-animation 2s linear 0s infinite;
+}
+
+.tinyButton:hover {
+  transform: scale(1.2);
 }
 
 /* secret trick */
