@@ -112,6 +112,11 @@ body {
     opacity: 0.7;
 }
 
+#SB {
+  height: 30px;
+  width: 30px;
+}
+
 #titleHolder {
   display: flex;
   align-items: center;
@@ -119,7 +124,10 @@ body {
 }
 
 #exitS {
-  place-self: end;
+  margin-bottom: auto;
+  height: 15px;
+  width: 15px;
+  place-self:  end;
 }
 
 #main {
@@ -162,22 +170,9 @@ body {
   margin-left: 15px;
 }
 
-.smallCyberButtonContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background-color: var(--green4);
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
-}
-
 .smallCyberButton {
-  width: 70px;
-  height: 30px; 
+  width: 110px;
+  height: 40px; 
   border: 0;
   outline: none;
   background-color: var(--green1);
@@ -186,7 +181,7 @@ body {
   font-family: Tomorrow, sans-serif;
   font-size: .85rem;
   text-transform: uppercase;
-  color: var(--green1);
+  color: var(--green4);
   clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
 }
 
@@ -266,6 +261,7 @@ body {
 
 /*below is the setup for the games buttons and other stuff*/
 .MBtn {
+  overflow: hidden;
   width: 200px;
   height: 200px; 
   border: 0;
@@ -300,6 +296,11 @@ body {
   padding: 0 5px;
   background-color: var(--green4);
   z-index: 3;
+}
+
+.MI {
+  height: 75px;
+  width: 75px;
 }
 
 /* secret trick */

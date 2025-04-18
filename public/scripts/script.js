@@ -16,7 +16,7 @@ holder.style.display = 'none';
 
 //gets all the buttons to be clicked and when clicked swicthes
 
-let settingButton = document.getElementById('settingButton').addEventListener('click', () => {
+let settingButton = document.getElementById('SB').addEventListener('click', () => {
     settingHolder.style.display = 'block';
     main.style.display = 'none';
 })
