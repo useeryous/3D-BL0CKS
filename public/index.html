@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="styles/style.css">-->
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="assets/3dblocks.svg">
     <title>3D-BL0CKS</title>
 </head>
@@ -66,33 +66,33 @@
         </div>
         <div id="settingHolder">
             <div>
-                <h1>settings</h1>
+                <div id="titleHolder">
+                    <h1>settings</h1>
+                    <p id="exitS">X</p>
+                </div>
                 <hr>
                 <form>
                     <label>themes</label>
                     <select>
-                        <option>purple</option>
-                        <option>blue</option>
-                        <option>green</option>
-                        <option>yellow</option>
-                        <option>red</option>
+                        <option value="C1">purple</option>
+                        <option value="C2" selected>green</option>
+                        <option value="C3" >blue</option>
+                        <option value="C4">yellow</option>
+                        <option value="C5">red</option>
                     </select>
                 </form>
                 <form>
                     <label>form of proxy</label>
                     <select>
-                        <option>UltraViolet</option>
-                        <option>RammerHead</option>
-                        <option>HolyUnblocker</option>
-                        <option>CroxyProxy</option>
-                        <option>TacoProxy</option>
-                        <option>ZesterProxy</option>
+                        <option value="P1" selected>UltraViolet</option>
+                        <option value="P2">RammerHead</option>
+                        <option value="P3">ScramJet</option>
                     </select>
                 </form>
             </div>
         </div>
     </div>
     <script src="scripts/matrix.js"></script>
-    <!--<script defer src="scripts/script.js"></script>-->
+    <script defer src="scripts/script.js"></script>
 </body>
 </html>

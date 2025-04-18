@@ -1,68 +1,57 @@
 //hide holder and setup
 let holder = document.getElementById('screenHolder');
 let settingHolder = document.getElementById('settingHolder');
+
+let main = document.getElementById('main');
+
+let games = document.getElementsByClassName('game');
+let apps = document.getElementsByClassName('app');
+let NSFW = document.getElementsByClassName('NSFW');
+let others = document.getElementsByClassName('other');
+
+//the setup for webpage
 holder.style.display = 'none';
 settingHolder.style.display = 'none';
 holder.style.display = 'none';
 
 //gets all the buttons to be clicked and when clicked swicthes
 
-let allBtn = document.getElementById('allBtn').addEventListener('click', showAll);
-let gamesBtn = document.getElementById('gamesBtn').addEventListener('click', showGames);
-let appsBtn = document.getElementById('appsBtn').addEventListener('click', showApps);
-let NSFWBtn = document.getElementById('NSFWBtn').addEventListener('click', showNSFW);
-let otherBtn = document.getElementById('otherBtn').addEventListener('click', showOthers);
+let settingButton = document.getElementById('settingButton').addEventListener('click', () => {
+    settingHolder.style.display = 'block';
+    main.style.display = 'none';
+})
+let XButtonS = document.getElementById('exitS').addEventListener('click', () => {
+    settingHolder.style.display = 'none';
+    main.style.display = 'flex';
+})
 
-//all the apps ti be show or hiden
-const games = document.getElementsByClassName('game');
-const apps = document.getElementsByClassName('app');
-const NSFW = document.getElementsByClassName('NSFW');
-const others = document.getElementsByClassName('other');
-
-
-
-//all functions to hide the apps and the rest of other functions
-
-showAll = () => {
+let allBtn = document.getElementById('allBtn').addEventListener('click', () => {
     games.style.display = 'block';
     apps.style.display = 'block';
     NSFW.style.display = 'block';
     others.style.display = 'block';
-}
-
-showGames = () => {
+});
+let gamesBtn = document.getElementById('gamesBtn').addEventListener('click', () => {
     games.style.display = 'block';
     apps.style.display = 'none';
     NSFW.style.display = 'none';
     others.style.display = 'none';
-}
-
-showApps = () => {
+});
+let appsBtn = document.getElementById('appsBtn').addEventListener('click', () => {
     games.style.display = 'none';
     apps.style.display = 'block';
     NSFW.style.display = 'none';
     others.style.display = 'none';
-}
-
-showNSFW = () => {
+});
+let NSFWBtn = document.getElementById('NSFWBtn').addEventListener('click', () => {
     games.style.display = 'none';
     apps.style.display = 'none';
     NSFW.style.display = 'block';
     others.style.display = 'none';
-}
-
-showOthers = () => {
+});
+let otherBtn = document.getElementById('otherBtn').addEventListener('click', () => {
     games.style.display = 'none';
     apps.style.display = 'none';
     NSFW.style.display = 'none';
     others.style.display = 'block';
-}
-
-/*function showAll() {
-*    games.hidden = false;
-*    apps.hidden = false;
-*    NSFW.hidden = false;
-*    others.hidden = false;
-}*/
-
-
+});
