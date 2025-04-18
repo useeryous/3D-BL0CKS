@@ -1,4 +1,5 @@
 ```
+enjoy a ascii art of a cat
  /\     /\
 {  `---'  }
 {  O   O  }
@@ -13,13 +14,16 @@
 ```
 
 ```markdown
-## Why Choose Our Site?
+# 3D-Bl0CKS
 
-- **Secure**: Built with robust security measures to ensure your data stays safe.
-- **Fast**: Optimized for speed, providing a seamless browsing experience.
-- **Unblockable**: Designed to bypass restrictions, ensuring uninterrupted access.
+### the best out there
+* very secure
+* fast
+* very custom to your needs
+* free
+* a nice feel using
+* almost invisible
 
-## Useful Links
-
+### depends used in this project 
 - [UV Proxy on GitHub](https://github.com/titaniumnetwork-dev/Ultraviolet)
 ```
