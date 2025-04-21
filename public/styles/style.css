@@ -264,7 +264,7 @@ body {
   overflow: hidden;
   width: 200px;
   height: 200px; 
-  border: 0;
+  border: 1;
   outline: none;
   background-color: var(--green1);
   cursor: pointer;
