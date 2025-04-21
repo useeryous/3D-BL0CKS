@@ -321,6 +321,7 @@ body {
 
 #otherTopbar {
   display: flex;
+  width: 1295px absolute;
   overflow: hidden;
   border-radius: 10px 10px 0px 0px;
   background-color: var(--green2);
@@ -339,10 +340,15 @@ body {
 }
 
 #exitP {
-  place-self: end;
+  margin-left: 895px;
+}
+
+#searchBar {
+  place-self: center;
 }
 
 #ProxyScreen {
+  width: 1315px;
   border-radius: 0px 0px 10px 10px;
   place-self: end;
 }
