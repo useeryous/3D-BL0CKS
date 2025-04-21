@@ -22,6 +22,7 @@ let googleBtn = document.getElementById("google").addEventListener("click", () =
 //the setup for webpage
 holder.style.display = 'none';
 settingHolder.style.display = 'none';
+otherScreen.style.display = 'none';
 
 //gets all the buttons to be clicked and when clicked swicthes
 
