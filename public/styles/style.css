@@ -18,6 +18,15 @@ iframe {
   margin-bottom: 0px;
 }
 
+input {
+  border: solid var(--green1);
+  border-radius: 5px;
+  background-color: var(--green4);
+  color: var(--green1);
+  opacity: 0.7;
+  height: 35px;
+}
+
 select {
   background-color: var(--green4);
   color: var(--green1);
@@ -300,6 +309,44 @@ body {
   transform: scale(1.2);
 }
 
+/*search stuff*/
+
+#other {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 160px;
+  left: 15px;
+}
+
+#otherTopbar {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+  background-color: var(--green2);
+  gap: 15px;
+  padding-left: 15px;
+  padding: 5px;
+  padding-top: 5px;
+}
+
+#refresh {
+  transition: transform 0.5s ease-in-out;
+}
+
+#refresh:hover {
+  transform: rotate(-360deg);
+}
+
+#exitP {
+  place-self: end;
+}
+
+#ProxyScreen {
+  border-radius: 0px 0px 10px 10px;
+  place-self: end;
+}
+
 /*below is the setup for the games buttons and other stuff*/
 .MBtn {
   width: 80px;
@@ -344,6 +391,11 @@ body {
 .MI {
   height: 75px;
   width: 75px;
+}
+
+.smallThing {
+  height: 35px;
+  width: 35px;
 }
 
 /* secret trick */

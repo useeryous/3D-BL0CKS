@@ -12,6 +12,13 @@ let others = document.getElementsByClassName('other');
 
 //sets the screen to be the main screen
 
+let exit = document.getElementById('exitP').addEventListener('click', () => {
+    holder.style.display = 'none';
+    settingHolder.style.display = 'none';
+    otherScreen.style.display = 'none';
+    main.style.display = 'flex';
+});
+
 let googleBtn = document.getElementById("google").addEventListener("click", () => {
     main.style.display = "none";
     holder.style.display = "none";
