@@ -124,6 +124,10 @@ body {
   width: 30px;
 }
 
+#SB:hover {
+  transform: scale(1.2);
+}
+
 #titleHolder {
   display: flex;
   align-items: center;

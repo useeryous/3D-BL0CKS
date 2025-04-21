@@ -23,6 +23,11 @@ settingHolder.style.display = 'none';
 
 //gets all the buttons to be clicked and when clicked swicthes
 
+let exitScreen = document.getElementById('exitSSS').addEventListener('click', () => {
+    holder.style.display = 'none';
+    main.style.display = 'flex';
+});
+
 let settingButton = document.getElementById('SB').addEventListener('click', () => {
     settingHolder.style.display = 'block';
     main.style.display = 'none';
