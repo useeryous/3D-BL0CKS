@@ -23,6 +23,8 @@ select {
 option {
   background-color: var(--green4);
   color: var(--green1);
+  border: var(--green1) solid 3px;
+  border-radius: 10px;
   opacity: 0.7;
   width: 200px;
   height: 75px;
@@ -86,6 +88,11 @@ body {
   background-color: var(--green4);
   border-radius: 100px;
   opacity: 0.7;
+}
+
+#content {
+  left: 50px;
+  padding-left: 50px;
 }
 
 #con {
@@ -261,10 +268,12 @@ body {
 
 /*below is the setup for the games buttons and other stuff*/
 .MBtn {
-  overflow: hidden;
-  width: 200px;
-  height: 200px; 
-  border: 1;
+  width: 80px;
+  height: 80px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
   outline: none;
   background-color: var(--green1);
   cursor: pointer;
@@ -273,7 +282,7 @@ body {
   font-size: .85rem;
   text-transform: uppercase;
   color: var(--green1);
-  clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+  clip-path: polygon(75% 0, 100% 25%, 100% 100%, 25% 100%, 0% 75%, 0 0);
 }
 
 .MBtnG {

@@ -9,10 +9,17 @@ let apps = document.getElementsByClassName('app');
 let NSFW = document.getElementsByClassName('NSFW');
 let others = document.getElementsByClassName('other');
 
+//sets the screen to be the main screen
+
+let googleBtn = document.getElementById("google").addEventListener("click", () => {
+    main.style.display = "none";
+    holder.style.display = "flex";
+    
+}); 
+
 //the setup for webpage
 holder.style.display = 'none';
 settingHolder.style.display = 'none';
-holder.style.display = 'none';
 
 //gets all the buttons to be clicked and when clicked swicthes
 
