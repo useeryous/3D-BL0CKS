@@ -8,6 +8,16 @@
     --green5: #005E00;
 }
 
+iframe {
+  border: solid var(--green1);
+  border-radius: 10px 10px 0px 0px;
+  width: 750px;
+  height: 450px;
+  background-color: var(--green4);
+  opacity: 0.7;
+  margin-bottom: 0px;
+}
+
 select {
   background-color: var(--green4);
   color: var(--green1);
@@ -58,10 +68,26 @@ html {
 }
 
 body {
+  display: flex;
+  justify-content: center;
     height: 100%;
     width: 100%;
     margin: 0px;
     background-color: #000000;
+}
+
+#bottomRow {
+  margin-top: 0px;
+  width: 741px;
+  height: 35px;
+  display: flex;
+  justify-content: end;
+  padding-right: 15px;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  background-color: var(--green1);
+  border-radius: 0px 0px 10px 10px;
 }
 
 #screenHolder {
@@ -172,6 +198,10 @@ body {
 #smallIcon {
   width: 25px;
   height: 25px;
+}
+
+#smallIcon:hover {
+  transform: scale(1.2);
 }
 
 #btnHolder {

@@ -1,6 +1,7 @@
 //hide holder and setup
 let holder = document.getElementById('screenHolder');
 let settingHolder = document.getElementById('settingHolder');
+let otherScreen = document.getElementById('other');
 
 let main = document.getElementById('main');
 
@@ -13,8 +14,9 @@ let others = document.getElementsByClassName('other');
 
 let googleBtn = document.getElementById("google").addEventListener("click", () => {
     main.style.display = "none";
-    holder.style.display = "flex";
-    
+    holder.style.display = "none";
+    settingHolder.style.display = "none";
+    otherScreen.style.display = "flex";
 }); 
 
 //the setup for webpage
@@ -25,15 +27,21 @@ settingHolder.style.display = 'none';
 
 let exitScreen = document.getElementById('exitSSS').addEventListener('click', () => {
     holder.style.display = 'none';
+    settingHolder.style.display = 'none';
+    otherScreen.style.display = 'none';
     main.style.display = 'flex';
 });
 
 let settingButton = document.getElementById('SB').addEventListener('click', () => {
     settingHolder.style.display = 'block';
+    holder.style.display = 'none';
     main.style.display = 'none';
+    otherScreen.style.display = 'none';
 })
 let XButtonS = document.getElementById('exitS').addEventListener('click', () => {
     settingHolder.style.display = 'none';
+    holder.style.display = 'none';
+    otherScreen.style.display = 'none';
     main.style.display = 'flex';
 })
 

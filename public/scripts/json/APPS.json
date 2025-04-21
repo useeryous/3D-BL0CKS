@@ -1,0 +1,32 @@
+{
+    "name": "APPS",
+    "apps": [
+        {
+            "name": "google"
+        },
+        {
+            "name": "anuraOS"
+        },
+        {
+            "name": "youtube"
+        },
+        {
+            "name": "spotify"
+        },
+        {
+            "name": "discord"
+        },
+        {
+            "name": "reddit"
+        },
+        {
+            "name": "GeForce NOW"
+        },
+        {
+            "name": "now.gg"
+        }
+    ],
+    "games": [
+            
+    ]
+}
