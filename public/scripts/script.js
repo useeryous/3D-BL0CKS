@@ -63,6 +63,16 @@ function matricCoderGreen() {
  */
 
 function matrixGreen() {
+
+    /*setup for webpage*/
+
+
+    //custom fonts
+
+    let cyberPunk = new FontFace('cyberPunk', 'url(https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap)')
+
+    document.fonts.add(cyberPunk);
+
     //color vars
     let black = "#000000";
     let green1 = "#42B124";
@@ -108,6 +118,8 @@ function matrixGreen() {
     /*the main area*/
 
     let main = document.getElementById('main');
+    let mainContent = document.getElementById('mainContent');
+    let mainLabel = document.getElementById('mainLabel');
 
     let MBtn = document.getElementsByClassName('MBtn');
     let MBtnG = document.getElementsByClassName('MBtnG');
@@ -163,7 +175,7 @@ function matrixGreen() {
     topbar.style.opacity = "0.7";
     topbar.style.display = "flex";
     topbar.style.width = "95%";
-    topbar.style.height = "max-content";
+    topbar.style.height = "125px";
     topbar.style.border = "0";
     topbar.style.outline = "none";
     topbar.style.backgroundColor = green1;
@@ -192,6 +204,7 @@ function matrixGreen() {
     topbarLabel.style.backgroundColor = green4;
     topbarLabel.style.opacity = "0.7";
     topbarLabel.style.zIndex = "3";
+    topbarLabel.style.fontFamily = cyberPunk;
     
 
     link.style.textDecoration = "none";
@@ -246,6 +259,7 @@ function matrixGreen() {
     btn__content[i].style.bottom = "2px";
     btn__content[i].style.backgroundColor = green4;
     btn__content[i].style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+    //btn__content[i].style.fontFamily = "cyberPunk";
     }
 
     for (let i = 0; i < btn__label.length; i++) {
@@ -258,6 +272,7 @@ function matrixGreen() {
     btn__label[i].style.backgroundColor = green4;
     btn__label[i].style.opacity = "0.7";
     btn__label[i].style.zIndex = "3";
+    btn__label[i].style.fontFamily = "cyberPunk";
     }
 
     SB.style.width = "35px";
@@ -282,8 +297,45 @@ function matrixGreen() {
     main.style.paddingTop = "15px";
     main.style.paddingLeft = "50px";
     main.style.opacity = "0.7";
-    main.style.borderRadius = "100px";
     main.style.paddingBottom = "15px";
+
+    main.style.backgroundColor = green4;
+    main.style.justifyContent = "space-around";
+    main.style.position = "absolute";
+    main.style.paddingTop = "15px";
+    main.style.paddingLeft = "40px";
+    main.style.opacity = "0.7";
+    main.style.display = "flex";
+    main.style.width = "95%";
+    main.style.height = "56%";
+    main.style.border = "0";
+    main.style.outline = "none";
+    main.style.backgroundColor = green1;
+    main.style.opacity = "0.7";
+    main.style.cursor = "default";
+    main.style.color = green1;
+    main.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    mainContent.style.display = "flex";
+    mainContent.style.padding = "15px";
+    mainContent.style.position = "absolute";
+    mainContent.style.top = "2px";
+    mainContent.style.left = "2px";
+    mainContent.style.right = "2px";
+    mainContent.style.bottom = "2px";
+    mainContent.style.backgroundColor = green4;
+    mainContent.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    mainLabel.style.height = "10px";
+    mainLabel.style.fontSize = ".40rem";
+    mainLabel.style.position = "absolute";
+    mainLabel.style.bottom = "-4px";
+    mainLabel.style.right = "8%";
+    mainLabel.style.padding = "0 5px";
+    mainLabel.style.backgroundColor = green4;
+    mainLabel.style.opacity = "0.7";
+    mainLabel.style.zIndex = "3";
+    mainLabel.style.fontFamily = cyberPunk;
 
     for (let i = 0; i < MBtn.length; i++) {
         MBtn[i].style.display = "flex";
@@ -300,6 +352,7 @@ function matrixGreen() {
         MBtn[i].style.textTransform = "uppercase";
         MBtn[i].style.color = green1;
         MBtn[i].style.clipPath = "polygon(70% 0, 100% 25%, 100% 100%, 30% 100%, 0% 75%, 0 0)";
+        MBtn[i].style.yindex = "100"
     }
     for (let i = 0; i < MBtnG.length; i++) {
         MBtnG[i].style.display = "flex";
@@ -333,13 +386,6 @@ function matrixGreen() {
         MI[i].style.width = "75px";
         MI[i].style.height = "75px";
     }
-
-    screenHolder.style.top = "175px";
-    screenHolder.style.left = "15px";
-    screenHolder.style.width = "95%";
-    screenHolder.style.height = "max-content";
-    screenHolder.style.paddingLeft = "25px";
-    screenHolder.style.padding = "25px"
 
     exitSS.style.width = "35px";
     exitSS.style.height = "35px";
@@ -419,32 +465,72 @@ let XButtonS = document.getElementById('exitS').addEventListener('click', () => 
 
 //the topn row buttons for putting different categories of apps and games
 let allBtn = document.getElementById('allBtn').addEventListener('click', () => {
-    games.style.display = 'block';
-    apps.style.display = 'block';
-    NSFW.style.display = 'block';
-    others.style.display = 'block';
+    for (let i = 0; i < games.length; i++) {
+        games[i].style.display = 'block';
+    }
+    for (let i = 0; i < apps.length; i++) {
+        apps[i].style.display = 'block';
+    }
+    for (let i = 0; i < NSFW.length; i++) {
+        NSFW[i].style.display = 'block';
+    }
+    for (let i = 0; i < others.length; i++) {
+        others[i].style.display = 'block';
+    }
 });
 let gamesBtn = document.getElementById('gamesBtn').addEventListener('click', () => {
-    games.style.display = 'block';
-    apps.style.display = 'none';
-    NSFW.style.display = 'none';
-    others.style.display = 'none';
+    for (let i = 0; i < games.length; i++) {
+        games[i].style.display = 'block';
+    }
+    for (let i = 0; i < apps.length; i++) {
+        apps[i].style.display = 'none';
+    }
+    for (let i = 0; i < NSFW.length; i++) {
+        NSFW[i].style.display = 'none';
+    }
+    for (let i = 0; i < others.length; i++) {
+        others[i].style.display = 'none';
+    }
 });
 let appsBtn = document.getElementById('appsBtn').addEventListener('click', () => {
-    games.style.display = 'none';
-    apps.style.display = 'block';
-    NSFW.style.display = 'none';
-    others.style.display = 'none';
+    for (let i = 0; i < games.length; i++) {
+        games[i].style.display = 'none';
+    }
+    for (let i = 0; i < apps.length; i++) {
+        apps[i].style.display = 'block';
+    }
+    for (let i = 0; i < NSFW.length; i++) {
+        NSFW[i].style.display = 'none';
+    }
+    for (let i = 0; i < others.length; i++) {
+        others[i].style.display = 'none';
+    }
 });
 let NSFWBtn = document.getElementById('NSFWBtn').addEventListener('click', () => {
-    games.style.display = 'none';
-    apps.style.display = 'none';
-    NSFW.style.display = 'block';
-    others.style.display = 'none';
+    for (let i = 0; i < games.length; i++) {
+        games[i].style.display = 'none';
+    }
+    for (let i = 0; i < apps.length; i++) {
+        apps[i].style.display = 'none';
+    }
+    for (let i = 0; i < NSFW.length; i++) {
+        NSFW[i].style.display = 'block';
+    }
+    for (let i = 0; i < others.length; i++) {
+        others[i].style.display = 'none';
+    }
 });
 let otherBtn = document.getElementById('otherBtn').addEventListener('click', () => {
-    games.style.display = 'none';
-    apps.style.display = 'none';
-    NSFW.style.display = 'none';
-    others.style.display = 'block';
+    for (let i = 0; i < games.length; i++) {
+        games[i].style.display = 'none';
+    }
+    for (let i = 0; i < apps.length; i++) {
+        apps[i].style.display = 'none';
+    }
+    for (let i = 0; i < NSFW.length; i++) {
+        NSFW[i].style.display = 'none';
+    }
+    for (let i = 0; i < others.length; i++) {
+        others[i].style.display = 'block';
+    }
 });
