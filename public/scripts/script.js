@@ -1,3 +1,5 @@
+import matrixGreen from './style.js';
+
 //hide holder and setup
 let holder = document.getElementById('screenHolder');
 let settingHolder = document.getElementById('settingHolder');
