@@ -11,52 +11,58 @@
         <canvas width="1920" height="900" id="matrixCodeSpace">
         </canvas>
         <div id="topbar">
-            <a id="link" href="index.html">
-                <div id="title">
-                    <p class="TT">██████╗░██████╗░░░░░░░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗░██████╗</p>
-                    <P class="TT">╚════██╗██╔══██╗░░░░░░██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝██╔════╝</P>
-                    <P class="TT">░█████╔╝██║░░██║█████╗██████╦╝██║░░░░░██║░░██║██║░░╚═╝█████═╝░╚█████╗░</P>
-                    <P class="TT">░╚═══██╗██║░░██║╚════╝██╔══██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░░╚═══██╗</P>
-                    <p class="TT">██████╔╝██████╔╝░░░░░░██████╦╝███████╗╚█████╔╝╚█████╔╝██║░╚██╗██████╔╝</p>
-                    <P class="TT">╚═════╝░╚═════╝░░░░░░░╚═════╝░╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝╚═════╝░</P>
+            <div id="topbarContent">
+                <a id="link" href="index.html">
+                    <div id="title">
+                        <p class="TT">██████╗░██████╗░░░░░░░██████╗░██╗░░░░░░█████╗░░█████╗░██╗░░██╗░██████╗</p>
+                        <P class="TT">╚════██╗██╔══██╗░░░░░░██╔══██╗██║░░░░░██╔══██╗██╔══██╗██║░██╔╝██╔════╝</P>
+                        <P class="TT">░█████╔╝██║░░██║█████╗██████╦╝██║░░░░░██║░░██║██║░░╚═╝█████═╝░╚█████╗░</P>
+                        <P class="TT">░╚═══██╗██║░░██║╚════╝██╔══██╗██║░░░░░██║░░██║██║░░██╗██╔═██╗░░╚═══██╗</P>
+                        <p class="TT">██████╔╝██████╔╝░░░░░░██████╦╝███████╗╚█████╔╝╚█████╔╝██║░╚██╗██████╔╝</p>
+                        <P class="TT">╚═════╝░╚═════╝░░░░░░░╚═════╝░╚══════╝░╚════╝░░╚════╝░╚═╝░░╚═╝╚═════╝░</P>
+                    </div>
+                </a>
+                <div id="logo">
+                    <img src="assets/skull.svg" alt="logo" id="skull">
                 </div>
-            </a>
-            <div id="btnHolder">
-                <button class="btn" id="allBtn">
-                    <span class="btn__content">All</span>
-                    <span class="btn__glitch"></span>
-                    <span class="btn__label">r25</span>
-                </button>  
-                <button class="btn" id="gamesBtn">
-                    <span class="btn__content">Games</span>
-                    <span class="btn__glitch"></span>
-                    <span class="btn__label">r25</span>
-                </button>
-                <button class="btn" id="appsBtn">
-                    <span class="btn__content">Apps</span>
-                    <span class="btn__glitch"></span>
-                    <span class="btn__label">r25</span>
-                </button>                    
-                <button class="btn" id="NSFWBtn">
-                    <span class="btn__content">NSFW</span>
-                    <span class="btn__glitch"></span>
-                    <span class="btn__label">r25</span>
-                </button>  
-                <button class="btn" id="otherBtn">
-                    <span class="btn__content">Other</span>
-                    <span class="btn__glitch"></span>
-                    <span class="btn__label">r25</span>
-                </button>  
+                <div id="btnHolder">
+                    <button class="btn" id="allBtn">
+                        <span class="btn__content">All</span>
+                        <span class="btn__glitch"></span>
+                        <span class="btn__label">r25</span>
+                    </button>  
+                    <button class="btn" id="gamesBtn">
+                        <span class="btn__content">Games</span>
+                        <span class="btn__glitch"></span>
+                        <span class="btn__label">r25</span>
+                    </button>
+                    <button class="btn" id="appsBtn">
+                        <span class="btn__content">Apps</span>
+                        <span class="btn__glitch"></span>
+                        <span class="btn__label">r25</span>
+                    </button>                    
+                    <button class="btn" id="NSFWBtn">
+                        <span class="btn__content">NSFW</span>
+                        <span class="btn__glitch"></span>
+                        <span class="btn__label">r25</span>
+                    </button>  
+                    <button class="btn" id="otherBtn">
+                        <span class="btn__content">Other</span>
+                        <span class="btn__glitch"></span>
+                        <span class="btn__label">r25</span>
+                    </button>  
+                </div>
+                <div class="settingButton">
+                    <img alt="settings" id="SB" src="assets/gear logo.svg" >
+                </div>
             </div>
-            <div class="settingButton">
-                <img alt="settings" id="SB" src="assets/gear logo.svg" >
-            </div>
+            <span id="topbarLabel">r25</span>
         </div>
         <div id="main">
             <div class="MBtn" class="app">
-                <img id="google" src="assets/MainImages/Google__G__logo.svg.png" alt="Google" class="MI">
                 <span class="MBtnG"></span>
                 <span class="MBtnL">r25</span>
+                <img id="google" src="assets/MainImages/Google__G__logo.svg.png" alt="Google" class="MI">
             </div>
         </div>
         <div id="screenHolder">
@@ -64,7 +70,7 @@
                 <img src="assets/X.svg" alt="exit" class="tinyButton" id="exitSSS">
             </div>
             <div id="screen">
-                <iframe>
+                <iframe id="gameScreen">
 
                 </iframe>
                 <div id="bottomRow">

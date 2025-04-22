@@ -37,6 +37,31 @@ function matricCoderGreen() {
     setInterval( matrix, 76 );
 }
 
+/*
+ *      .... NO! ...                  ... MNO! ...
+ *    ..... MNO!! ...................... MNNOO! ...
+ *  ..... MMNO! ......................... MNNOO!! .
+ * ..... MNOONNOO!   MMMMMMMMMMPPPOII!   MNNO!!!! .
+ *  ... !O! NNO! MMMMMMMMMMMMMPPPOOOII!! NO! ....
+ *     ...... ! MMMMMMMMMMMMMPPPPOOOOIII! ! ...
+ *    ........ MMMMMMMMMMMMPPPPPOOOOOOII!! .....
+ *    ........ MMMMMOOOOOOPPPPPPPPOOOOMII! ...
+ *     ....... MMMMM..    OPPMMP    .,OMI! ....
+ *      ...... MMMM::   o.,OPMP,.o   ::I!! ...
+ *          .... NNM:::.,,OOPM!P,.::::!! ....
+ *           .. MMNNNNNOOOOPMO!!IIPPO!!O! .....
+ *          ... MMMMMNNNNOO:!!:!!IPPPPOO! ....
+ *            .. MMMMMNNOOMMNNIIIPPPOO!! ......
+ *           ...... MMMONNMMNNNIIIOO!..........
+ *        ....... MN MOMMMNNNIIIIIO! OO ..........
+ *     ......... MNO! IiiiiiiiiiiiI OOOO ...........
+ *   ...... NNN.MNO! . O!!!!!!!!!O . OONO NO! ........
+ *    .... MNNNNNO! ...OOOOOOOOOOO .  MMNNON!........
+ *    ...... MNNNNO! .. PPPPPPPPP .. MMNON!........
+ *       ...... OO! ................. ON! .......
+ *          ................................
+ */
+
 function matrixGreen() {
     //color vars
     let black = "#000000";
@@ -64,8 +89,12 @@ function matrixGreen() {
     //title
     let link = document.getElementById('link');
     let topbar = document.getElementById('topbar');
+    let topbarLabel = document.getElementById('topbarLabel');
+    let topbarContent = document.getElementById('topbarContent');
     let title = document.getElementById('title');
     let TT = document.getElementsByClassName('TT');
+    let logo = document.getElementById('logo');
+    let skull = document.getElementById('skull');
 
     //button holder
     let btnHolder = document.getElementById('btnHolder');
@@ -84,11 +113,14 @@ function matrixGreen() {
     let MBtnG = document.getElementsByClassName('MBtnG');
     let MBtnL = document.getElementsByClassName('MBtnL');
 
+    let MI = document.getElementsByClassName('MI');
+
     /*the screen holder*/
 
     let screenHolder = document.getElementById('screenHolder');
     let screen = document.getElementById('screen');
     let bottomRow = document.getElementById('bottomRow');
+    let gameScreen = document.getElementById('gameScreen');
     let exitSS = document.getElementById('exitS');
 
     /* the setting page thing*/
@@ -122,34 +154,73 @@ function matrixGreen() {
     matrixCodeSpace.style.position = "relative";
 
     topbar.style.backgroundColor = green4;
-    topbar.style.height = "max-content";
-    topbar.style.width = "100%", "absolute";
+    topbar.style.justifyContent = "space-around";
     topbar.style.position = "absolute";
     topbar.style.top = "15px";
     topbar.style.left = "15px";
-    topbar.style.borderRadius = "100px";
     topbar.style.paddingTop = "15px";
-    topbar.style.paddingLeft = "75px";
+    topbar.style.paddingLeft = "40px";
     topbar.style.opacity = "0.7";
     topbar.style.display = "flex";
+    topbar.style.width = "95%";
+    topbar.style.height = "max-content";
+    topbar.style.border = "0";
+    topbar.style.outline = "none";
+    topbar.style.backgroundColor = green1;
+    topbar.style.opacity = "0.7";
+    topbar.style.cursor = "default";
+    topbar.style.color = green1;
+    topbar.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    topbarContent.style.display = "flex";
+    topbarContent.style.alignItems = "center";
+    topbarContent.style.justifyContent = "space-around";
+    topbarContent.style.position = "absolute";
+    topbarContent.style.top = "2px";
+    topbarContent.style.left = "2px";
+    topbarContent.style.right = "2px";
+    topbarContent.style.bottom = "2px";
+    topbarContent.style.backgroundColor = green4;
+    topbarContent.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    topbarLabel.style.height = "10px";
+    topbarLabel.style.fontSize = ".40rem";
+    topbarLabel.style.position = "absolute";
+    topbarLabel.style.bottom = "-4px";
+    topbarLabel.style.right = "8%";
+    topbarLabel.style.padding = "0 5px";
+    topbarLabel.style.backgroundColor = green4;
+    topbarLabel.style.opacity = "0.7";
+    topbarLabel.style.zIndex = "3";
+    
 
     link.style.textDecoration = "none";
 
     title.style.display = "block";
     title.style.marginBottom = "15px";
 
+    //52N 3PX
+
     for (let i = 0; i < TT.length; i++) {
         TT[i].style.color = green1;
+        TT[i].style.fontSize =  "11px";
         TT[i].style.margin = "0px";
     }
 
+    logo.style.textAlign = "left";
+    logo.style.widthm = "260px";
+
+    skull.style.width = "75px";
+    skull.style.height = "75px";
+
     btnHolder.style.width = "max-content";
     btnHolder.style.display = "flex";
+    btnHolder.style.alignItems = "center";
     btnHolder.style.gap = "10px";
 
     for (let i = 0; i < btn.length; i++) {
-        btn[i].style.width = "130px";
-        btn[i].style.height = "60px";
+        btn[i].style.width = "80px";
+        btn[i].style.height = "40px";
         btn[i].style.border = "0";
         btn[i].style.outline = "none";
         btn[i].style.backgroundColor = green1;
@@ -200,6 +271,89 @@ function matrixGreen() {
         SB.style.transition = "0.2s";
         SB.style.transform = "scale(1)";
     }
+
+    main.style.width = "95%", "absolute";
+    main.style.height = "max-content";
+    main.style.position = "absolute";
+    main.style.top = "175px";
+    main.style.left = "15px";
+    main.style.display = "flex";
+    main.style.backgroundColor = green4;
+    main.style.paddingTop = "15px";
+    main.style.paddingLeft = "50px";
+    main.style.opacity = "0.7";
+    main.style.borderRadius = "100px";
+    main.style.paddingBottom = "15px";
+
+    for (let i = 0; i < MBtn.length; i++) {
+        MBtn[i].style.display = "flex";
+        MBtn[i].style.width = "85px";
+        MBtn[i].style.height = "85px";
+        MBtn[i].style.border = "0";
+        MBtn[i].style.outline = "none";
+        MBtn[i].style.backgroundColor = green1;
+        MBtn[i].style.opacity = "0.7";
+        MBtn[i].style.cursor = "pointer";
+        MBtn[i].style.position = "relative";
+        MBtn[i].style.fontFamily = "Tomorrow, sans-serif";
+        MBtn[i].style.fontSize = ".85rem";
+        MBtn[i].style.textTransform = "uppercase";
+        MBtn[i].style.color = green1;
+        MBtn[i].style.clipPath = "polygon(70% 0, 100% 25%, 100% 100%, 30% 100%, 0% 75%, 0 0)";
+    }
+    for (let i = 0; i < MBtnG.length; i++) {
+        MBtnG[i].style.display = "flex";
+        MBtnG[i].style.alignItems = "center";
+        MBtnG[i].style.justifyContent = "center";
+        MBtnG[i].style.position = "absolute";
+        MBtnG[i].style.top = "2px";
+        MBtnG[i].style.left = "2px";
+        MBtnG[i].style.right = "2px";
+        MBtnG[i].style.bottom = "2px";
+        MBtnG[i].style.backgroundColor = green4;
+        MBtnG[i].style.clipPath = "polygon(70% 0, 100% 25%, 100% 100%, 30% 100%, 0% 75%, 0 0)";
+    }
+    for (let i = 0; i < MBtnL.length; i++) {
+        MBtnL[i].style.height = "10px";
+        MBtnL[i].style.fontSize = ".40rem";
+        MBtnL[i].style.position = "absolute";
+        MBtnL[i].style.bottom = "-4px";
+        MBtnL[i].style.right = "8%";
+        MBtnL[i].style.padding = "0 5px";
+        MBtnL[i].style.backgroundColor = green4;
+        MBtnL[i].style.opacity = "0.7";
+        MBtnL[i].style.zIndex = "3";
+    }
+    for (let i = 0; i < MI.length; i++) {
+        MI[i].style.marginLeft = "auto";
+        MI[i].style.marginRight = "auto";
+        MI[i].style.marginTop = "100%" - "25%";
+        MI[i].style.opacity = "1";
+        MI[i].style.zIndex = "3";
+        MI[i].style.width = "75px";
+        MI[i].style.height = "75px";
+    }
+
+    screenHolder.style.top = "175px";
+    screenHolder.style.left = "15px";
+    screenHolder.style.width = "95%";
+    screenHolder.style.height = "max-content";
+    screenHolder.style.paddingLeft = "25px";
+    screenHolder.style.padding = "25px"
+
+    exitSS.style.width = "35px";
+    exitSS.style.height = "35px";
+
+    screen.style.width = "95%";
+    screen.style.height = "max-content";
+
+    gameScreen.style.width = "100%";
+    gameScreen.style.height = "85%";
+
+    bottomRow.style.width = "100%";
+    bottomRow.style.height = "15%";
+    bottomRow.style.display = "flex";
+
 }
 
 
@@ -262,6 +416,8 @@ let XButtonS = document.getElementById('exitS').addEventListener('click', () => 
     main.style.display = 'flex';
 })
 
+
+//the topn row buttons for putting different categories of apps and games
 let allBtn = document.getElementById('allBtn').addEventListener('click', () => {
     games.style.display = 'block';
     apps.style.display = 'block';
