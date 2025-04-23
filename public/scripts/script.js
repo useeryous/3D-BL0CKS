@@ -498,17 +498,15 @@ function matrixGreen() {
     other.style.top = "175px";
     other.style.left = "15px";
     other.style.backgroundColor = green4;
-    other.style.justifyContent = "space-around";
+    other.style.flexDirection = "column";
 
     other.style.backgroundColor = green4;
-    other.style.justifyContent = "space-around";
     other.style.position = "absolute";
     other.style.paddingTop = "15px";
-    other.style.paddingLeft = "40px";
     other.style.opacity = "0.7";
     other.style.display = "static";
     other.style.width = "95%";
-    other.style.height = "56%";
+    other.style.height = "70%";
     other.style.border = "0";
     other.style.outline = "none";
     other.style.backgroundColor = green2;
@@ -518,11 +516,20 @@ function matrixGreen() {
     other.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
 
     otherTopbar.style.display = "flex";
+    otherTopbar.style.height = "10%";
+    otherTopbar.style.width = "80%";
     
     for (let i = 0; i < smallThing.length; i++) {
         smallThing[i].style.width = "35px";
         smallThing[i].style.height = "35px";
     }
+
+    searchBar.style.width = "125px";
+    searchBar.style.height = "35px";
+    searchBar.style.backgroundColor = green4;
+    searchBar.style.opacity = "0.7";
+    searchBar.style.color = green1;
+    searchBar.style.border = "1", green1, "solid";
 }
 
 
