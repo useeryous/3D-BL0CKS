@@ -400,6 +400,43 @@ function matrixGreen() {
     bottomRow.style.height = "15%";
     bottomRow.style.display = "flex";
 
+    settingHolder.style.width = "95%";
+    settingHolder.style.height = "max-content";
+    settingHolder.style.position = "absolute";
+    settingHolder.style.top = "175px";
+    settingHolder.style.left = "15px";
+
+    settingHolder.style.backgroundColor = green4;
+    settingHolder.style.justifyContent = "space-around";
+    settingHolder.style.position = "absolute";
+    settingHolder.style.paddingTop = "15px";
+    settingHolder.style.paddingLeft = "40px";
+    settingHolder.style.opacity = "0.7";
+    settingHolder.style.display = "flex";
+    settingHolder.style.width = "95%";
+    settingHolder.style.height = "56%";
+    settingHolder.style.border = "0";
+    settingHolder.style.outline = "none";
+    settingHolder.style.backgroundColor = green1;
+    settingHolder.style.opacity = "0.7";
+    settingHolder.style.cursor = "default";
+    settingHolder.style.color = green1;
+    settingHolder.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    content.style.padding = "15px";
+    content.style.position = "absolute";
+    content.style.top = "2px";
+    content.style.left = "2px";
+    content.style.right = "2px";
+    content.style.bottom = "2px";
+    content.style.backgroundColor = green4;
+    content.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    titleHolder.style.display = "flex";
+    titleHolder.style.padding = "15px";
+    titleHolder.style.alignItems = "center";
+
+    exitS.style.marginLeft = "80%";
 }
 
 
