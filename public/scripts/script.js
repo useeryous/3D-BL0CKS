@@ -149,6 +149,7 @@ function matrixGreen() {
     let otherTopbar = document.getElementById('otherTopbar');
     let smallThing = document.getElementsByClassName('smallThing');
     let searchBar = document.getElementById('searchBar');
+    let exitP = document.getElementById('exitP');
 
     //styling the webpage
 
@@ -519,6 +520,8 @@ function matrixGreen() {
     otherTopbar.style.width = "80%";
     
     for (let i = 0; i < smallThing.length; i++) {
+        smallThing[i].style.marginLeft = "10px";
+        smallThing[i].style.marginRight = "10px";
         smallThing[i].style.width = "35px";
         smallThing[i].style.height = "35px";
     }
@@ -538,6 +541,8 @@ function matrixGreen() {
     proxyScreen.style.opacity = "0.7";
     proxyScreen.style.color = green1;
     proxyScreen.style.border = "0";
+
+    exitP.style.placeSelf = "right";
 }
 
 
