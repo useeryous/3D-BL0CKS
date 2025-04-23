@@ -147,7 +147,7 @@ function matrixGreen() {
     let other = document.getElementById('other');
     let proxyScreen = document.getElementById('proxyScreen');
     let otherTopbar = document.getElementById('otherTopbar');
-    let smallThing = document.getElementById('smallThing');
+    let smallThing = document.getElementsByClassName('smallThing');
     let searchBar = document.getElementById('searchBar');
 
     //styling the webpage
@@ -204,7 +204,7 @@ function matrixGreen() {
     topbarLabel.style.backgroundColor = green4;
     topbarLabel.style.opacity = "0.7";
     topbarLabel.style.zIndex = "3";
-    topbarLabel.style.fontFamily = cyberPunk;
+    topbarLabel.style.fontFamily = 'cyberPunk';
     
 
     link.style.textDecoration = "none";
@@ -437,6 +437,92 @@ function matrixGreen() {
     titleHolder.style.alignItems = "center";
 
     exitS.style.marginLeft = "80%";
+
+    for (let i = 0; i < hr.length; i++) {
+        hr[i].style.borderColor = green1;
+        hr[i].style.color = green1;
+        hr[i].style.backgroundColor = green1;
+    }
+    for (let i = 0; i < label.length; i++) {
+        label[i].style.color = green1;
+        label[i].style.fontFamily = cyberPunk;
+    }
+    for (let i = 0; i < smallCyberButton.length; i++) {
+        smallCyberButton[i].style.backgroundColor = green4;
+        smallCyberButton[i].style.position = "absolute";
+        smallCyberButton[i].style.padding = "5px";
+        smallCyberButton[i].style.opacity = "0.7";
+        smallCyberButton[i].style.width = "70px";
+        smallCyberButton[i].style.height = "30px";
+        smallCyberButton[i].style.border = "0";
+        smallCyberButton[i].style.outline = "none";
+        smallCyberButton[i].style.backgroundColor = green1;
+        smallCyberButton[i].style.opacity = "0.7";
+        smallCyberButton[i].style.cursor = "default";
+        smallCyberButton[i].style.color = green4;
+        smallCyberButton[i].style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+        smallCyberButton[i].style.textAlign = "center";
+    }
+    for (let i = 0; i < form.length; i++) {
+        form[i].style.display = "flex";
+        form[i].style.alignItems = "center";
+        form[i].style.color = green1;
+        form[i].style.fontFamily = cyberPunk;
+        form[i].style.marginBottom = "10px";
+    }
+    for (let i = 0; i < select.length; i++) {
+        select[i].style.padding = "5px";
+        select[i].style.opacity = "0.7";
+        select[i].style.display = "flex";
+        select[i].style.marginLeft = "10px";
+        select[i].style.width = "150px";
+        select[i].style.height = "40px";
+        select[i].style.border = "0";
+        select[i].style.outline = "none";
+        select[i].style.backgroundColor = green1;
+        select[i].style.opacity = "0.7";
+        select[i].style.cursor = "default";
+        select[i].style.color = green4;
+        select[i].style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+    }
+    for (let i = 0; i < option.length; i++) {
+        option[i].style.color = green1;
+        option[i].style.fontFamily = cyberPunk;
+        option[i].style.backgroundColor = green4;
+
+    }
+
+    other.style.width = "95%";
+    other.style.height = "max-content";
+    other.style.position = "absolute";
+    other.style.top = "175px";
+    other.style.left = "15px";
+    other.style.backgroundColor = green4;
+    other.style.justifyContent = "space-around";
+
+    other.style.backgroundColor = green4;
+    other.style.justifyContent = "space-around";
+    other.style.position = "absolute";
+    other.style.paddingTop = "15px";
+    other.style.paddingLeft = "40px";
+    other.style.opacity = "0.7";
+    other.style.display = "static";
+    other.style.width = "95%";
+    other.style.height = "56%";
+    other.style.border = "0";
+    other.style.outline = "none";
+    other.style.backgroundColor = green2;
+    other.style.opacity = "0.7";
+    other.style.cursor = "default";
+    other.style.color = green1;
+    other.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    otherTopbar.style.display = "flex";
+    
+    for (let i = 0; i < smallThing.length; i++) {
+        smallThing[i].style.width = "35px";
+        smallThing[i].style.height = "35px";
+    }
 }
 
 
