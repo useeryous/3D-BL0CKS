@@ -145,7 +145,7 @@ function matrixGreen() {
     /* the other tab for the proxy and webpages */
 
     let other = document.getElementById('other');
-    let proxyScreen = document.getElementById('proxyScreen');
+    let proxyScreen = document.getElementById('ProxyScreen');
     let otherTopbar = document.getElementById('otherTopbar');
     let smallThing = document.getElementsByClassName('smallThing');
     let searchBar = document.getElementById('searchBar');
@@ -513,7 +513,6 @@ function matrixGreen() {
     other.style.opacity = "0.7";
     other.style.cursor = "default";
     other.style.color = green1;
-    other.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
 
     otherTopbar.style.display = "flex";
     otherTopbar.style.height = "10%";
@@ -524,12 +523,21 @@ function matrixGreen() {
         smallThing[i].style.height = "35px";
     }
 
-    searchBar.style.width = "125px";
+    searchBar.style.width = "250px";
     searchBar.style.height = "35px";
     searchBar.style.backgroundColor = green4;
     searchBar.style.opacity = "0.7";
     searchBar.style.color = green1;
-    searchBar.style.border = "1", green1, "solid";
+    searchBar.style.border = "3", green1, "solid";
+
+    searchBar.style.clipPath = "polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0)";
+
+    proxyScreen.style.width = "100%";
+    proxyScreen.style.height = "100%";
+    proxyScreen.style.backgroundColor = green4;
+    proxyScreen.style.opacity = "0.7";
+    proxyScreen.style.color = green1;
+    proxyScreen.style.border = "0";
 }
 
 
