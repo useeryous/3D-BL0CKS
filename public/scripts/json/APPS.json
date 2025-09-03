@@ -2,31 +2,37 @@
     "name": "APPS",
     "apps": [
         {
-            "name": "google"
+            "name": "google",
+            "type": "app",
+            "coverImage": "./MainImages/google__G__logo.svg.png"
         },
         {
-            "name": "anuraOS"
+            "name": "anuraOS",
+            "type": "app"
         },
         {
-            "name": "youtube"
+            "name": "youtube",
+            "type": "app"
         },
         {
-            "name": "spotify"
+            "name": "spotify",
+            "type": "app"
         },
         {
-            "name": "discord"
+            "name": "discord",
+            "type": "app"
         },
         {
-            "name": "reddit"
+            "name": "reddit",
+            "type": "app"
         },
         {
-            "name": "GeForce NOW"
+            "name": "GeForce NOW",
+            "type": "app"
         },
         {
-            "name": "now.gg"
+            "name": "now.gg",
+            "type": "app"
         }
-    ],
-    "games": [
-            
     ]
 }

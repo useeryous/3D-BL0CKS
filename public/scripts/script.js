@@ -1,3 +1,32 @@
+async function fetchApps() {
+    const response = await fetch('./json/APPS.json');
+    const appsData = await response.json();
+    return appsData;
+}
+
+async function loadApps() {
+    const mainContent = document.getElementById('mainContent');
+    mainContent.innerHTML = '';
+
+    const appsData = await fetchApps();
+
+    appsData.forEach(appData => {
+        // Create the app container
+        const app = document.createElement('div');
+        app.className = appData.type || 'app'; // Use type from JSON if available, fallback to 'app'
+        app.id = appData.id;
+        // Build the inner HTML based on JSON fields
+        app.innerHTML = `
+            <span class="MBtnG"></span>
+            <span class="MBtnL">${appData.name || ''}</span>
+            <img id="${appData.id}" src="${appData.icon || ''}" alt="${appData.name || ''}" class="MI">
+            ${appData.description ? `<div class="app-desc">${appData.description}</div>` : ''}
+        `;
+
+        mainContent.appendChild(app);
+    });
+}
+
 function matricCoderGreen() {
     const matrixCodeSpace = document.getElementById( "matrixCodeSpace" );
     const matrixContext = matrixCodeSpace.getContext( "2d" );
@@ -69,7 +98,7 @@ function matrixGreen() {
 
     //custom fonts
 
-    let cyberPunk = new FontFace('cyberPunk', 'url(https://fonts.googleapis.com/css?family=Barlow|Tomorrow:400,700&display=swap)')
+    let cyberPunk = new FontFace('cyberPunk', 'https://fonts.gstatic.com/s/tomorrow/v17/WBLmrETNbFtZCeGqgRXce2DwLQ.woff2')
 
     document.fonts.add(cyberPunk);
 
@@ -526,7 +555,7 @@ function matrixGreen() {
         smallThing[i].style.height = "35px";
     }
 
-    searchBar.style.width = "250px";
+    searchBar.style.width = "450px";
     searchBar.style.height = "35px";
     searchBar.style.backgroundColor = green4;
     searchBar.style.opacity = "0.7";
@@ -545,82 +574,86 @@ function matrixGreen() {
     exitP.style.placeSelf = "right";
 }
 
+window.addEventListener('DOMContentLoaded', () => {
 
-//LOADING WEBPAGE
-matricCoderGreen();
-matrixGreen();
 
-//hide holder and setup
-let holder = document.getElementById('screenHolder');
-let settingHolder = document.getElementById('settingHolder');
-let otherScreen = document.getElementById('other');
 
-let main = document.getElementById('main');
+    //LOADING WEBPAGE
+    loadApps();
+    matricCoderGreen();
+    matrixGreen();
 
-let games = document.getElementsByClassName('game');
-let apps = document.getElementsByClassName('app');
-let NSFW = document.getElementsByClassName('NSFW');
-let others = document.getElementsByClassName('other');
+    //hide holder and setup
+    let holder = document.getElementById('screenHolder');
+    let settingHolder = document.getElementById('settingHolder');
+    let otherScreen = document.getElementById('other');
 
-//sets the screen to be the main screen
+    let main = document.getElementById('main');
 
-let exit = document.getElementById('exitP').addEventListener('click', () => {
+    let games = document.getElementsByClassName('game');
+    let apps = document.getElementsByClassName('app');
+    let NSFW = document.getElementsByClassName('NSFW');
+    let others = document.getElementsByClassName('other');
+
+    //sets the screen to be the main screen
+
+    let exit = document.getElementById('exitP').addEventListener('click', () => {
+        holder.style.display = 'none';
+        settingHolder.style.display = 'none';
+        otherScreen.style.display = 'none';
+        main.style.display = 'flex';
+    });
+
+    let googleBtn = document.getElementById("google").addEventListener("click", () => {
+        main.style.display = "none";
+        holder.style.display = "none";
+        settingHolder.style.display = "none";
+        otherScreen.style.display = "flex";
+    }); 
+
+    //the setup for webpage
     holder.style.display = 'none';
     settingHolder.style.display = 'none';
     otherScreen.style.display = 'none';
-    main.style.display = 'flex';
-});
 
-let googleBtn = document.getElementById("google").addEventListener("click", () => {
-    main.style.display = "none";
-    holder.style.display = "none";
-    settingHolder.style.display = "none";
-    otherScreen.style.display = "flex";
-}); 
+    //gets all the buttons to be clicked and when clicked swicthes
 
-//the setup for webpage
-holder.style.display = 'none';
-settingHolder.style.display = 'none';
-otherScreen.style.display = 'none';
+    let exitScreen = document.getElementById('exitSSS').addEventListener('click', () => {
+        holder.style.display = 'none';
+        settingHolder.style.display = 'none';
+        otherScreen.style.display = 'none';
+        main.style.display = 'flex';
+    });
 
-//gets all the buttons to be clicked and when clicked swicthes
-
-let exitScreen = document.getElementById('exitSSS').addEventListener('click', () => {
-    holder.style.display = 'none';
-    settingHolder.style.display = 'none';
-    otherScreen.style.display = 'none';
-    main.style.display = 'flex';
-});
-
-let settingButton = document.getElementById('SB').addEventListener('click', () => {
-    settingHolder.style.display = 'block';
-    holder.style.display = 'none';
-    main.style.display = 'none';
-    otherScreen.style.display = 'none';
-})
-let XButtonS = document.getElementById('exitS').addEventListener('click', () => {
-    settingHolder.style.display = 'none';
-    holder.style.display = 'none';
-    otherScreen.style.display = 'none';
-    main.style.display = 'flex';
-})
+    let settingButton = document.getElementById('SB').addEventListener('click', () => {
+        settingHolder.style.display = 'block';
+        holder.style.display = 'none';
+        main.style.display = 'none';
+        otherScreen.style.display = 'none';
+    })
+    let XButtonS = document.getElementById('exitS').addEventListener('click', () => {
+        settingHolder.style.display = 'none';
+        holder.style.display = 'none';
+        otherScreen.style.display = 'none';
+        main.style.display = 'flex';
+    })
 
 
-//the topn row buttons for putting different categories of apps and games
-let allBtn = document.getElementById('allBtn').addEventListener('click', () => {
-    for (let i = 0; i < games.length; i++) {
-        games[i].style.display = 'block';
-    }
-    for (let i = 0; i < apps.length; i++) {
-        apps[i].style.display = 'block';
-    }
-    for (let i = 0; i < NSFW.length; i++) {
-        NSFW[i].style.display = 'block';
-    }
-    for (let i = 0; i < others.length; i++) {
-        others[i].style.display = 'block';
-    }
-});
+    //the topn row buttons for putting different categories of apps and games
+    let allBtn = document.getElementById('allBtn').addEventListener('click', () => {
+        for (let i = 0; i < games.length; i++) {
+            games[i].style.display = 'block';
+        }
+        for (let i = 0; i < apps.length; i++) {
+            apps[i].style.display = 'block';
+        }
+        for (let i = 0; i < NSFW.length; i++) {
+            NSFW[i].style.display = 'block';
+        }
+        for (let i = 0; i < others.length; i++) {
+            others[i].style.display = 'block';
+        }
+    });
 let gamesBtn = document.getElementById('gamesBtn').addEventListener('click', () => {
     for (let i = 0; i < games.length; i++) {
         games[i].style.display = 'block';
@@ -676,4 +709,5 @@ let otherBtn = document.getElementById('otherBtn').addEventListener('click', () 
     for (let i = 0; i < others.length; i++) {
         others[i].style.display = 'block';
     }
+});
 });
